@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>UNIPIA</title>
+
+  <!--[if mso]>
+  <style type="text/css">
+    body, table, td { font-family: Arial, Helvetica, sans-serif !important; }
+  </style>
+  <![endif]-->
+
+  <style>
+    /* 모바일 100% 반응형 (Outlook 데스크톱은 무시하지만, 모바일/웹메일에 적용됨) */
+    @media screen and (max-width: 620px) {
+      .container { width: 100% !important; }
+      .px { padding-left: 16px !important; padding-right: 16px !important; }
+      .btn-img { width: 92% !important; max-width: 320px !important; height: auto !important; }
+      .hero-img { width: 100% !important; height: auto !important; }
+    }
+
+    /* 링크 밑줄 제거(일부 클라이언트) */
+    a { text-decoration: none; }
+    img { border: 0; outline: none; text-decoration: none; }
+  </style>
+</head>
+
+<body style="margin:0; padding:0; background:#f4f4f4;">
+  <!-- 프리헤더(메일 리스트 미리보기 문구) -->
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+    UNIPIA - App for UCL students
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f4f4f4;">
+    <tr>
+      <td align="center" style="padding:24px 12px;">
+
+        <!-- 메인 컨테이너 -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"
+               class="container"
+               style="width:600px; max-width:600px; background:#ffffff; border-radius:16px; overflow:hidden;">
+
+          <!-- HERO 이미지 -->
+          <tr>
+            <td align="center" style="padding:0;">
+              <img src="HTML_SVG.svg"
+                   width="600" alt="UNIPIA"
+                   class="hero-img"
+                   style="display:block; width:600px; max-width:600px; height:auto;"
+              >
+            </td>
+          </tr>
+
+          <!-- 버튼 영역 (항상 클릭 가능하게 HTML로 분리 구성) -->
+          <tr>
+            <td align="center" class="px" style="padding:18px 24px 10px 24px;">
+
+              <!-- Google Play -->
+              <a href="https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=en_GB" target="_blank">
+                <img src="google.png"
+                     width="220" alt="Get it on Google Play"
+                     class="btn-img"
+                     style="display:block; width:220px; height:auto; margin:10px auto;"
+                >
+              </a>
+
+              <!-- App Store -->
+              <a href="https://apps.apple.com/kr/app/unipia-uk-student-community/id1608830229?l=en_GB" target="_blank">
+                <img src="Apple.png"
+                     width="220" alt="Download on the App Store"
+                     class="btn-img"
+                     style="display:block; width:220px; height:auto; margin:10px auto;"
+                >
+              </a>
+
+            </td>
+          </tr>
+
+          <!-- Hint 버튼 -->
+          <tr>
+            <td align="center" class="px" style="padding:0 24px 24px 24px;">
+              <a href="https://unipia.uk/post/?id=1206" target="_blank">
+                <img src="Hint.png"
+                     width="260" alt="See location hint"
+                     class="btn-img"
+                     style="display:block; width:260px; height:auto; margin:8px auto;"
+                >
+              </a>
+            </td>
+          </tr>
+
+          <!-- 안전한 Footer(Outlook 깨짐 방지: 테이블/인라인만) -->
+          <tr>
+            <td align="center" style="padding:18px 24px; background:#ffffff;">
+              <p style="margin:0; font-size:11px; line-height:1.6; color:#999999;">
+                © 2026 UNIPIA LTD. All rights reserved.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /container -->
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
