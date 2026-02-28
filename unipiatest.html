@@ -15,9 +15,7 @@
 <style>
   @media screen and (max-width: 620px){
     .container{ width:100% !important; }
-    .fluid { width:100% !important; height:auto !important; }
-    .btn-img { width:140px !important; height:auto !important; }
-    .hint-img { width:160px !important; height:auto !important; }
+    .main-img { width:100% !important; height:auto !important; }
   }
   img{ border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; display:block; }
   a{ text-decoration:none; }
@@ -34,55 +32,42 @@
                class="container"
                style="width:600px;max-width:600px;background:#ffffff;border-radius:16px;overflow:hidden;">
 
-          <!-- 메인 이미지 (버튼 없는 배경) -->
+          <!-- 메인 이미지 (버튼 포함) + 이미지 맵 -->
           <tr>
             <td align="center" style="padding:0;">
-              <img src="https://jsm1007.github.io/unipia1/HTML_png1.5.png" 
+              <img src="https://jsm1007.github.io/unipia1/HTML_png.png" 
                    width="600" 
-                   class="fluid"
-                   alt="UNIPIA" 
-                   style="display:block;width:600px;max-width:600px;height:auto;">
-            </td>
-          </tr>
-
-          <!-- 상단 스토어 버튼 영역 -->
-          <tr>
-            <td align="center" style="padding:20px 24px 10px 24px;">
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
-                <tr>
-                  <td align="center" style="padding:0 8px;">
-                    <a href="https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=en_GB" target="_blank">
-                      <img src="https://jsm1007.github.io/unipia1/google.png" 
-                           width="166" 
-                           class="btn-img"
-                           alt="Get it on Google Play" 
-                           style="display:block;width:166px;height:auto;">
-                    </a>
-                  </td>
-                  <td align="center" style="padding:0 8px;">
-                    <a href="https://apps.apple.com/kr/app/unipia-uk-student-community/id1608830229?l=en_GB" target="_blank">
-                      <img src="https://jsm1007.github.io/unipia1/Apple.png" 
-                           width="147" 
-                           class="btn-img"
-                           alt="Download on the App Store" 
-                           style="display:block;width:147px;height:auto;">
-                    </a>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- 힌트 버튼 -->
-          <tr>
-            <td align="center" style="padding:10px 24px 20px 24px;">
-              <a href="https://unipia.uk/post/?id=1206" target="_blank">
-                <img src="https://jsm1007.github.io/unipia1/Hint.png" 
-                     width="180" 
-                     class="hint-img"
-                     alt="See location hint" 
-                     style="display:block;width:180px;height:auto;margin:0 auto;">
-              </a>
+                   class="main-img"
+                   alt="UNIPIA - App for UCL students" 
+                   style="display:block;width:600px;max-width:600px;height:auto;"
+                   usemap="#unipia-map">
+              
+              <map name="unipia-map">
+                <!-- 상단 Google Play 버튼: x=133, y=373, width=166, height=50 -->
+                <area shape="rect" coords="133,373,299,423" 
+                      href="https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=en_GB" 
+                      target="_blank" alt="Get it on Google Play">
+                
+                <!-- 상단 App Store 버튼: x=321, y=373, width=147, height=50 -->
+                <area shape="rect" coords="321,373,468,423" 
+                      href="https://apps.apple.com/kr/app/unipia-uk-student-community/id1608830229?l=en_GB" 
+                      target="_blank" alt="Download on the App Store">
+                
+                <!-- 힌트 버튼: x=211, y=1709, width=180, height=48 -->
+                <area shape="rect" coords="211,1709,391,1757" 
+                      href="https://unipia.uk/post/?id=1206" 
+                      target="_blank" alt="See location hint">
+                
+                <!-- 하단 Google Play 버튼: x=133, y=1902, width=166, height=50 -->
+                <area shape="rect" coords="133,1902,299,1952" 
+                      href="https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=en_GB" 
+                      target="_blank" alt="Get it on Google Play">
+                
+                <!-- 하단 App Store 버튼: x=321, y=1902, width=147, height=50 -->
+                <area shape="rect" coords="321,1902,468,1952" 
+                      href="https://apps.apple.com/kr/app/unipia-uk-student-community/id1608830229?l=en_GB" 
+                      target="_blank" alt="Download on the App Store">
+              </map>
             </td>
           </tr>
 
