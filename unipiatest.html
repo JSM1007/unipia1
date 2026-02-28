@@ -22,24 +22,22 @@
 <![endif]-->
 
 <style>
-  /* Reset */
   body { margin:0; padding:0; width:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
   table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
   img { border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; display:block; }
   a { text-decoration:none; }
 
-  /* Responsive */
+  /* Desktop/Mobile swap */
+  .desktop-view { display:block; }
+  .mobile-view { display:none; max-height:0; overflow:hidden; mso-hide:all; }
+
   @media screen and (max-width: 620px) {
     .wrapper { width:100% !important; max-width:100% !important; }
-    .main-img { width:100% !important; height:auto !important; }
-    .btn-row { text-align:center !important; }
-    .btn-img { width:140px !important; height:auto !important; }
-    .hint-img { width:150px !important; height:auto !important; }
-    .spacer-top { height:200px !important; }
-    .spacer-hint { height:700px !important; }
-    .spacer-bottom { height:80px !important; }
-    .spacer-footer { height:30px !important; }
-    .hide-mobile { display:none !important; }
+    .desktop-view { display:none !important; max-height:0 !important; overflow:hidden !important; }
+    .mobile-view { display:block !important; max-height:none !important; overflow:visible !important; }
+    .mobile-img { width:100% !important; height:auto !important; }
+    .mobile-btn { width:140px !important; height:auto !important; }
+    .mobile-hint { width:150px !important; height:auto !important; }
   }
 </style>
 </head>
@@ -54,11 +52,63 @@
                class="wrapper"
                style="width:600px;max-width:600px;background-color:#ffffff;border-radius:16px;overflow:hidden;">
 
-          <!-- 배경 이미지 + 버튼 오버레이 -->
-          <tr>
+          <!-- ========== MOBILE VIEW ========== -->
+          <!-- 모바일: 버튼 포함된 완성 이미지 + 별도 클릭 버튼 -->
+          <tr class="mobile-view">
+            <td align="center" style="padding:0;">
+              <!-- 완성 이미지 (버튼 포함) -->
+              <img src="https://jsm1007.github.io/unipia1/HTML_png.png" 
+                   width="600" 
+                   class="mobile-img"
+                   alt="UNIPIA - App for UCL students" 
+                   style="display:block;width:100%;height:auto;">
+
+              <!-- 모바일용 클릭 가능한 버튼 -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;">
+                <tr>
+                  <td align="center" style="padding:16px 20px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                      <tr>
+                        <td align="center" style="padding:0 6px;">
+                          <a href="https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=en_GB" target="_blank">
+                            <img src="https://jsm1007.github.io/unipia1/google.png" 
+                                 width="140" class="mobile-btn"
+                                 alt="Get it on Google Play" 
+                                 style="display:block;width:140px;height:auto;">
+                          </a>
+                        </td>
+                        <td align="center" style="padding:0 6px;">
+                          <a href="https://apps.apple.com/kr/app/unipia-uk-student-community/id1608830229?l=en_GB" target="_blank">
+                            <img src="https://jsm1007.github.io/unipia1/Apple.png" 
+                                 width="124" class="mobile-btn"
+                                 alt="Download on the App Store" 
+                                 style="display:block;width:124px;height:auto;">
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding:0 20px 16px 20px;">
+                    <a href="https://unipia.uk/post/?id=1206" target="_blank">
+                      <img src="https://jsm1007.github.io/unipia1/Hint.png" 
+                           width="150" class="mobile-hint"
+                           alt="See location hint" 
+                           style="display:block;width:150px;height:auto;margin:0 auto;">
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ========== DESKTOP VIEW ========== -->
+          <!-- 데스크톱: 배경 이미지 + 좌표 기반 버튼 -->
+          <tr class="desktop-view">
             <td align="center" valign="top" 
                 background="https://jsm1007.github.io/unipia1/HTML_png1.5.png"
-                style="background-image:url('https://jsm1007.github.io/unipia1/HTML_png1.5.png');background-size:100% auto;background-position:top center;background-repeat:no-repeat;">
+                style="background-image:url('https://jsm1007.github.io/unipia1/HTML_png1.5.png');background-size:600px 2005px;background-position:top center;background-repeat:no-repeat;">
 
               <!--[if gte mso 9]>
               <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:2005px;">
@@ -66,96 +116,76 @@
                 <v:textbox inset="0,0,0,0">
               <![endif]-->
 
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;">
 
-                <!-- 상단 버튼까지 spacer -->
+                <!-- 상단 버튼: y=373 -->
+                <tr><td height="373" style="height:373px;line-height:373px;font-size:0;">&nbsp;</td></tr>
                 <tr>
-                  <td height="373" class="spacer-top" style="height:373px;line-height:373px;font-size:0;">&nbsp;</td>
-                </tr>
-
-                <!-- 상단 스토어 버튼 -->
-                <tr>
-                  <td align="center" class="btn-row" style="padding:0 20px;">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                  <td align="left" style="padding:0;">
+                    <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;">
                       <tr>
-                        <td align="center" style="padding:0 6px;">
+                        <td width="133" style="width:133px;font-size:0;line-height:0;">&nbsp;</td>
+                        <td width="166" style="width:166px;">
                           <a href="https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=en_GB" target="_blank">
-                            <img src="https://jsm1007.github.io/unipia1/google.png" 
-                                 width="166" height="50" 
-                                 class="btn-img"
-                                 alt="Get it on Google Play" 
-                                 style="display:block;width:166px;height:50px;">
+                            <img src="https://jsm1007.github.io/unipia1/google.png" width="166" height="50" alt="Get it on Google Play" style="display:block;width:166px;height:50px;">
                           </a>
                         </td>
-                        <td align="center" style="padding:0 6px;">
+                        <td width="22" style="width:22px;font-size:0;line-height:0;">&nbsp;</td>
+                        <td width="147" style="width:147px;">
                           <a href="https://apps.apple.com/kr/app/unipia-uk-student-community/id1608830229?l=en_GB" target="_blank">
-                            <img src="https://jsm1007.github.io/unipia1/Apple.png" 
-                                 width="147" height="50" 
-                                 class="btn-img"
-                                 alt="Download on the App Store" 
-                                 style="display:block;width:147px;height:50px;">
+                            <img src="https://jsm1007.github.io/unipia1/Apple.png" width="147" height="50" alt="Download on the App Store" style="display:block;width:147px;height:50px;">
                           </a>
                         </td>
+                        <td style="font-size:0;line-height:0;">&nbsp;</td>
                       </tr>
                     </table>
                   </td>
                 </tr>
 
-                <!-- 힌트 버튼까지 spacer -->
+                <!-- 힌트 버튼: y=1709 -->
+                <tr><td height="1286" style="height:1286px;line-height:1286px;font-size:0;">&nbsp;</td></tr>
                 <tr>
-                  <td height="1286" class="spacer-hint" style="height:1286px;line-height:1286px;font-size:0;">&nbsp;</td>
-                </tr>
-
-                <!-- 힌트 버튼 -->
-                <tr>
-                  <td align="center" style="padding:0 20px;">
-                    <a href="https://unipia.uk/post/?id=1206" target="_blank">
-                      <img src="https://jsm1007.github.io/unipia1/Hint.png" 
-                           width="180" height="48" 
-                           class="hint-img"
-                           alt="See location hint" 
-                           style="display:block;width:180px;height:48px;margin:0 auto;">
-                    </a>
+                  <td align="left" style="padding:0;">
+                    <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;">
+                      <tr>
+                        <td width="211" style="width:211px;font-size:0;line-height:0;">&nbsp;</td>
+                        <td width="180" style="width:180px;">
+                          <a href="https://unipia.uk/post/?id=1206" target="_blank">
+                            <img src="https://jsm1007.github.io/unipia1/Hint.png" width="180" height="48" alt="See location hint" style="display:block;width:180px;height:48px;">
+                          </a>
+                        </td>
+                        <td style="font-size:0;line-height:0;">&nbsp;</td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
 
-                <!-- 하단 버튼까지 spacer -->
+                <!-- 하단 버튼: y=1902 -->
+                <tr><td height="145" style="height:145px;line-height:145px;font-size:0;">&nbsp;</td></tr>
                 <tr>
-                  <td height="145" class="spacer-bottom" style="height:145px;line-height:145px;font-size:0;">&nbsp;</td>
-                </tr>
-
-                <!-- 하단 스토어 버튼 -->
-                <tr>
-                  <td align="center" class="btn-row" style="padding:0 20px;">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                  <td align="left" style="padding:0;">
+                    <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;">
                       <tr>
-                        <td align="center" style="padding:0 6px;">
+                        <td width="133" style="width:133px;font-size:0;line-height:0;">&nbsp;</td>
+                        <td width="166" style="width:166px;">
                           <a href="https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=en_GB" target="_blank">
-                            <img src="https://jsm1007.github.io/unipia1/google.png" 
-                                 width="166" height="50" 
-                                 class="btn-img"
-                                 alt="Get it on Google Play" 
-                                 style="display:block;width:166px;height:50px;">
+                            <img src="https://jsm1007.github.io/unipia1/google.png" width="166" height="50" alt="Get it on Google Play" style="display:block;width:166px;height:50px;">
                           </a>
                         </td>
-                        <td align="center" style="padding:0 6px;">
+                        <td width="22" style="width:22px;font-size:0;line-height:0;">&nbsp;</td>
+                        <td width="147" style="width:147px;">
                           <a href="https://apps.apple.com/kr/app/unipia-uk-student-community/id1608830229?l=en_GB" target="_blank">
-                            <img src="https://jsm1007.github.io/unipia1/Apple.png" 
-                                 width="147" height="50" 
-                                 class="btn-img"
-                                 alt="Download on the App Store" 
-                                 style="display:block;width:147px;height:50px;">
+                            <img src="https://jsm1007.github.io/unipia1/Apple.png" width="147" height="50" alt="Download on the App Store" style="display:block;width:147px;height:50px;">
                           </a>
                         </td>
+                        <td style="font-size:0;line-height:0;">&nbsp;</td>
                       </tr>
                     </table>
                   </td>
                 </tr>
 
                 <!-- 하단 여백 -->
-                <tr>
-                  <td height="53" class="spacer-footer" style="height:53px;line-height:53px;font-size:0;">&nbsp;</td>
-                </tr>
+                <tr><td height="53" style="height:53px;line-height:53px;font-size:0;">&nbsp;</td></tr>
 
               </table>
 
