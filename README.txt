@@ -11,8 +11,8 @@
 ├── Apple.png             # App Store 버튼 이미지
 ├── Hint.png              # 힌트 버튼 이미지
 ├── HTML_SVG.svg          # 원본 SVG 파일 (참고용)
-├── HTML_SVG 4 1.svg      # 원본 SVG 파일 (참고용)
-├── HTML_SVG 4 1.png      # 원본 PNG 파일 (참고용)
+├── HTML_SVG 4 1.svg      # 원본 SVG 파일 (참고용) (버튼 없는 버전)
+├── HTML_SVG 4 1.png      # 원본 PNG 파일 (참고용) (버튼 없는 버전)
 └── README.txt            # 이 파일
 
 
@@ -53,6 +53,55 @@ https://jsm1007.github.io/unipia1/[파일명]
    - 힌트 버튼: Hint.png
    - 하단 Google 버튼: google.png
    - 하단 Apple 버튼: Apple.png
+
+
+[다른 호스팅 서버 사용 방법]
+--------------------------------------------------------------------------------
+GitHub Pages 외에 다른 호스팅 서비스를 사용할 수도 있습니다.
+
+1. Netlify (무료)
+   - https://www.netlify.com 에서 계정 생성
+   - "Add new site" > "Deploy manually" 선택
+   - 이미지 파일들을 드래그 앤 드롭으로 업로드
+   - 생성된 URL 형식: https://[사이트명].netlify.app/[파일명]
+   - unipia_mail.html에서 URL 수정
+
+2. Cloudflare Pages (무료)
+   - https://pages.cloudflare.com 에서 계정 생성
+   - "Create a project" > "Direct Upload" 선택
+   - 이미지 파일들 업로드
+   - 생성된 URL 형식: https://[프로젝트명].pages.dev/[파일명]
+   - unipia_mail.html에서 URL 수정
+
+3. AWS S3 (유료, 저렴)
+   - AWS 계정 생성 후 S3 버킷 생성
+   - 버킷 설정에서 "정적 웹 호스팅" 활성화
+   - 버킷 정책에서 퍼블릭 읽기 권한 설정
+   - 이미지 파일들 업로드
+   - 생성된 URL 형식: https://[버킷명].s3.[리전].amazonaws.com/[파일명]
+   - unipia_mail.html에서 URL 수정
+
+4. Firebase Hosting (무료)
+   - https://firebase.google.com 에서 프로젝트 생성
+   - Firebase CLI 설치: npm install -g firebase-tools
+   - firebase init hosting 실행
+   - 이미지 파일들을 public 폴더에 복사
+   - firebase deploy 실행
+   - 생성된 URL 형식: https://[프로젝트명].web.app/[파일명]
+   - unipia_mail.html에서 URL 수정
+
+5. Vercel (무료)
+   - https://vercel.com 에서 계정 생성
+   - "Add New" > "Project" 선택
+   - GitHub 저장소 연결 또는 파일 직접 업로드
+   - 생성된 URL 형식: https://[프로젝트명].vercel.app/[파일명]
+   - unipia_mail.html에서 URL 수정
+
+6. 자체 웹 서버
+   - Apache, Nginx 등 웹 서버에 이미지 파일 업로드
+   - 서버 도메인 + 경로로 URL 구성
+   - 예: https://your-domain.com/images/[파일명]
+   - unipia_mail.html에서 URL 수정
 
 
 [버튼 링크 수정 방법]
